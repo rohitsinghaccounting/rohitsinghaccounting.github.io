@@ -194,7 +194,13 @@ Xero Certified Specialist (Level 3) with 7+ years of experience in accounting, b
 <h2>Core Skills</h2>
 
 <div class="skills">
-<div class="skill">Xero Accounting</div>
+<div class="skill-card">
+    <div class="skill-title">Xero Accounting</div>
+
+    <div class="skill-detail">
+        Manage bookkeeping, bank reconciliations, invoicing, reporting and month-end closing in Xero.
+    </div>
+</div>
 <div class="skill">Bookkeeping</div>
 <div class="skill">GST Compliance</div>
 <div class="skill">UAE VAT</div>
@@ -407,6 +413,18 @@ LinkedIn Profile
 <footer>
 © 2026 Rohit Singh | Accounting Portfolio
 </footer>
+<script>
 
+document.querySelectorAll('.skill-card').forEach(card => {
+
+    card.addEventListener('click', function(){
+
+        this.classList.toggle('active');
+
+    });
+
+});
+
+</script>
 </body>
 </html>
