@@ -58,19 +58,44 @@ color:#002B7F;
 margin-bottom:15px;
 }
 
-.skills{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:12px;
+details{
+margin-bottom:12px;
+background:#E8F8FD;
+border-radius:10px;
+padding:12px;
+border-left:4px solid #13B5EA;
+transition:.3s;
 }
 
-.skill{
-background:#E8F8FD;
-color:#003B5C;
-padding:12px;
-border-radius:10px;
-text-align:center;
+details:hover{
+box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+
+summary{
+cursor:pointer;
+color:#002B7F;
+font-size:16px;
 font-weight:600;
+list-style:none;
+}
+
+summary::-webkit-details-marker{
+display:none;
+}
+
+summary:before{
+content:"▶ ";
+font-size:12px;
+}
+
+details[open] summary:before{
+content:"▼ ";
+}
+
+details p{
+margin-top:10px;
+line-height:1.7;
+color:#374151;
 }
 
 .contact a{
@@ -193,26 +218,89 @@ Xero Certified Specialist (Level 3) with 7+ years of experience in accounting, b
 
 <h2>Core Skills</h2>
 
-<div class="skills">
-<div class="skill-card">
-    <div class="skill-title">Xero Accounting</div>
+<details>
+<summary>Xero Accounting</summary>
+<p>
+Manage bookkeeping, bank reconciliations, invoicing, reporting and month-end closing in Xero.
+</p>
+</details>
 
-    <div class="skill-detail">
-        Manage bookkeeping, bank reconciliations, invoicing, reporting and month-end closing in Xero.
-    </div>
-</div>
-<div class="skill">Bookkeeping</div>
-<div class="skill">GST Compliance</div>
-<div class="skill">UAE VAT</div>
-<div class="skill">Bank Reconciliation</div>
-<div class="skill">Financial Reporting</div>
-<div class="skill">Accounts Payable</div>
-<div class="skill">Accounts Receivable</div>
-<div class="skill">Zoho Books</div>
-<div class="skill">Tally Prime</div>
-<div class="skill">Excel Reporting</div>
-<div class="skill">Cloud Accounting</div>
-</div>
+<details>
+<summary>Bookkeeping</summary>
+<p>
+Maintain accurate financial records, journals, ledgers and day-to-day accounting activities.
+</p>
+</details>
+
+<details>
+<summary>GST Compliance</summary>
+<p>
+Prepare GST returns, GST reconciliations and compliance reporting.
+</p>
+</details>
+
+<details>
+<summary>UAE VAT</summary>
+<p>
+Support VAT accounting, reconciliations and compliance reporting for UAE entities.
+</p>
+</details>
+
+<details>
+<summary>Bank Reconciliation</summary>
+<p>
+Match bank transactions with accounting records and resolve discrepancies.
+</p>
+</details>
+
+<details>
+<summary>Financial Reporting</summary>
+<p>
+Prepare Profit & Loss, Balance Sheet, cash flow and management reports.
+</p>
+</details>
+
+<details>
+<summary>Accounts Payable</summary>
+<p>
+Manage supplier invoices, payment processing and vendor reconciliations.
+</p>
+</details>
+
+<details>
+<summary>Accounts Receivable</summary>
+<p>
+Customer invoicing, collections and receivable follow-up.
+</p>
+</details>
+
+<details>
+<summary>Zoho Books</summary>
+<p>
+Bookkeeping, invoicing, reporting and cloud accounting using Zoho Books.
+</p>
+</details>
+
+<details>
+<summary>Tally Prime</summary>
+<p>
+Voucher entry, GST accounting and financial reporting using Tally Prime.
+</p>
+</details>
+
+<details>
+<summary>Excel Reporting</summary>
+<p>
+MIS reporting, reconciliations, dashboards and financial analysis in Excel.
+</p>
+</details>
+
+<details>
+<summary>Cloud Accounting</summary>
+<p>
+Remote bookkeeping and accounting using modern cloud accounting platforms.
+</p>
+</details>
 
 </div>
 
@@ -413,18 +501,6 @@ LinkedIn Profile
 <footer>
 © 2026 Rohit Singh | Accounting Portfolio
 </footer>
-<script>
 
-document.querySelectorAll('.skill-card').forEach(card => {
-
-    card.addEventListener('click', function(){
-
-        this.classList.toggle('active');
-
-    });
-
-});
-
-</script>
 </body>
 </html>
